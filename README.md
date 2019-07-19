@@ -49,6 +49,8 @@ We also use pretrained resnet50 weight file from https://download.pytorch.org/mo
 
 Three NVIDIA-2080Ti GPUs and 128G RAM are used while training.
 
+CUDA 10.1 cudnn 7.5.0 is needed 
+
 ### Creating training set 
 We generate our own training set from the official one. To obtain our training set, run
 `python create_model_1_train.py`        
@@ -75,6 +77,8 @@ We use pytorch framework for training, before training, use requirement.txt to i
 We also use pretrained resnet34 weight file from https://download.pytorch.org/models/resnet34-333f7ec4.pth. The file should be placed under ./data 
 
 Three NVIDIA-1080Ti GPUs and 64G RAM are used while training.
+
+CUDA 9.1 cudnn 7.1.3 is needed
 
 ## Train and submit
 First move to model_2 directory:
