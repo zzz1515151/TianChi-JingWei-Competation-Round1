@@ -26,6 +26,7 @@ class JingweiSegmentation(Dataset):
         self.split = split
         self.args = args
 
+
         # 读取预存的.npy数据，请修改读取的路径
         self.unit_size = args.base_size
         save_dir = os.path.join(base_dir, str(self.unit_size))

@@ -120,9 +120,9 @@ class Trainer(object):
                     if y2 > width:
                         y2 , y1  = width , width - unit_size
                     im = img[x1:x2, y1:y2, :]
-                    # if 255 in im[:,:,-1]:    # 判断裁剪出来的小图中是否存在有像素点
-                    Img1.append(im[:,:,0:3])   # 添加小图
-                    Label1.append(anno_map[x1:x2, y1:y2])   # 添加label
+                    if 255 in im[:,:,-1]:    # 判断裁剪出来的小图中是否存在有像素点
+                        Img1.append(im[:,:,0:3])   # 添加小图
+                        Label1.append(anno_map[x1:x2, y1:y2])   # 添加label
 
                     if y2 == width: break
 
@@ -156,9 +156,9 @@ class Trainer(object):
                     if y2 > width:
                         y2 , y1  = width , width - unit_size
                     im = img[x1:x2, y1:y2, :]
-                    # if 255 in im[:,:,-1]:    # 判断裁剪出来的小图中是否存在有像素点
-                    Img2.append(im[:,:,0:3])   # 添加小图
-                    Label2.append(anno_map[x1:x2, y1:y2])   # 添加label
+                    if 255 in im[:,:,-1]:    # 判断裁剪出来的小图中是否存在有像素点
+                        Img2.append(im[:,:,0:3])   # 添加小图
+                        Label2.append(anno_map[x1:x2, y1:y2])   # 添加label
 
                     if y2 == width: break
 
@@ -188,8 +188,8 @@ class Trainer(object):
             os.mkdir(save_dir)
             print("=> generate {}".format(unit_size))
             # split train dataset
-            images_train = Img #[:int(Img.shape[0]*0.8)]
-            categories_train = cat #[:int(cat.shape[0]*0.8)]
+            images_train = Img[:int(Img.shape[0]*0.8)]
+            categories_train = cat[:int(cat.shape[0]*0.8)]
             assert (len(images_train) == len(categories_train))
             np.save(os.path.join(save_dir, 'train_img.npy'), images_train)
             np.save(os.path.join(save_dir, 'train_label.npy'), categories_train)
