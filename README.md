@@ -35,7 +35,7 @@ jingwei-round1-submit
 
 ./submit/result_model_1 contains test results of model_1.           
 ./submit/result_model_2 contains test results of model_2.           
-./submit/result_final contains out final results.           
+./submit/result_final contains our final results.           
 
 ## Implementation of model_1
 
