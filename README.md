@@ -91,7 +91,7 @@ Until now you should be able to reproduce our result of model_2. Achieving test 
 
 
 ## Combination of model_1 and model_2
-To get out final submit, run   
+To get our final submit, run   
 `python final_result.py`            
 You can find our final results at ./submit/result_final             
 
