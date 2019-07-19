@@ -8,14 +8,14 @@ The file structure, following jingwei submission code standard, is as follow:
 
 jingwei-round1-submit  
 |--README.md  
-|--submit
+|--submit     
 |   |--result_model_2    
 |   |--result_model_1    
 |   |--result_final             
 |--data   
 |   |--jingwei   
-|   |--train_model_1  
-|   |--train_model_2 
+|   |--train_model_1    
+|   |--train_model_2      
 |   |--jingwei_round1_train_20190619.zip  
 |   |--jingwei_round1_test_a_20190619.zip  
 |--code   
